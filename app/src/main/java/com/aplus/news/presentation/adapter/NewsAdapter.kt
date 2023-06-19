@@ -42,7 +42,7 @@ class NewsAdapter(
                 .centerCrop()
                 .into(poster)
             title.text = item.title
-            description.text = limitOverview(item.content)
+            description.text = limitContent(item.content)
 
             mainCard.setOnClickListener { onClickNews(item) }
             executePendingBindings()
@@ -55,7 +55,7 @@ class NewsAdapter(
         notifyDataSetChanged()
     }
 
-    fun limitOverview(data: String): String {
+    fun limitContent(data: String): String {
         return if (data.length > 200) {
             var overview = data.substring(0, 200)
             if (overview[overview.length - 1] != '.') {

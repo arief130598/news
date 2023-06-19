@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import javax.inject.Inject
 
 abstract class BaseFragment<T: ViewDataBinding>(private val layoutId: Int) : Fragment() {
 

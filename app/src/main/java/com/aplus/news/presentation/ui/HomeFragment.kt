@@ -46,7 +46,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                     rvData.show()
                 }
                 is ResponseResult.Error -> {
-                    binding.mainShimmer.apply {
+                    mainShimmer.apply {
                         stopShimmer()
                         remove()
                     }
