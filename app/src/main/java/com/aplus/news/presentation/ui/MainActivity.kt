@@ -1,4 +1,4 @@
-package com.aplus.news
+package com.aplus.news.presentation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
