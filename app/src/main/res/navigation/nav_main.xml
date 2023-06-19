@@ -18,5 +18,9 @@
         android:id="@+id/detailFragment"
         android:name="com.aplus.news.presentation.ui.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="news"
+            app:argType="com.aplus.news.domain.model.News" />
+    </fragment>
 </navigation>

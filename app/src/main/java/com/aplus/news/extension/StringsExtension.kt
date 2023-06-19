@@ -1,4 +1,4 @@
-package com.aplus.core.extensions
+package com.aplus.news.extension
 
 fun String.isPhone(): Boolean {
     val p = "^1([34578])\\d{9}\$".toRegex()

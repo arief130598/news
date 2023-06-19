@@ -1,4 +1,4 @@
-package com.aplus.core.extensions
+package com.aplus.news.extension
 
 import android.app.Activity
 import android.app.AlarmManager
@@ -17,7 +17,6 @@ import android.net.ConnectivityManager
 import android.telephony.TelephonyManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
-import androidx.activity.ComponentActivity
 import androidx.annotation.BoolRes
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
@@ -25,13 +24,6 @@ import androidx.annotation.IntegerRes
 import androidx.annotation.StringRes
 import androidx.core.app.ActivityOptionsCompat
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.launch
 
 fun Context.getColorCompat(color: Int) = ContextCompat.getColor(this, color)
 

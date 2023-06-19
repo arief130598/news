@@ -1,4 +1,4 @@
-package com.aplus.core.extensions
+package com.aplus.news.extension
 
 import com.squareup.moshi.JsonDataException
 import com.squareup.moshi.Moshi

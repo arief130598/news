@@ -7,6 +7,7 @@ plugins {
     id(Plugins.NAVIGATION_SAFE_ARGS)
     id(Plugins.DAGGER_HILT)
     id(Plugins.DOKKA)
+    id(Plugins.KOTLIN_PARCELIZE)
     kotlin(Plugins.KAPT)
 }
 

@@ -1,4 +1,4 @@
-package com.aplus.core.extensions
+package com.aplus.news.extension
 
 import androidx.activity.ComponentActivity
 import androidx.fragment.app.Fragment

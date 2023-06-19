@@ -1,4 +1,4 @@
-package com.aplus.core.extensions
+package com.aplus.news.extension
 
 import android.content.Context
 import android.graphics.Bitmap

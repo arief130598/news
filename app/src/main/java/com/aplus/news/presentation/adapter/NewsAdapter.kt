@@ -4,17 +4,15 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.aplus.news.R
 import com.aplus.news.databinding.RvNewsBinding
 import com.aplus.news.domain.model.News
 import com.aplus.news.utils.DateHelper
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 
 class NewsAdapter(
-    private val fragment: Fragment,
+    private val context: Context,
     private var items: List<News>,
     private val onClickNews: (News) -> Unit,
 ) : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
@@ -35,16 +33,16 @@ class NewsAdapter(
     inner class ViewHolder(private val binding: RvNewsBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: News) = with(binding) {
-            binding.date.text = dateHelper.changeFormatTime(item.createdAt)
-            binding.contributor.text = item.contributorName
-            Glide.with(fragment)
+            date.text = dateHelper.changeFormatTime(item.createdAt)
+            contributor.text = item.contributorName
+            Glide.with(context)
                 .load(item.contentThumbnail)
                 .placeholder(R.drawable.no_image)
                 .error(R.drawable.no_image)
                 .centerCrop()
-                .into(binding.poster)
-            binding.title.text = item.title
-            binding.description.text = limitOverview(item.content)
+                .into(poster)
+            title.text = item.title
+            description.text = limitOverview(item.content)
 
             mainCard.setOnClickListener { onClickNews(item) }
             executePendingBindings()

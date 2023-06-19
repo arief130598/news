@@ -2,10 +2,10 @@ package com.aplus.news.presentation.ui
 
 import android.widget.Toast
 import androidx.fragment.app.viewModels
-import com.aplus.core.extensions.collectLatestLifecycleFlow
-import com.aplus.core.extensions.remove
-import com.aplus.core.extensions.setLinearAdapter
-import com.aplus.core.extensions.show
+import com.aplus.news.extension.collectLatestLifecycleFlow
+import com.aplus.news.extension.remove
+import com.aplus.news.extension.setLinearAdapter
+import com.aplus.news.extension.show
 import com.aplus.news.R
 import com.aplus.news.base.BaseFragment
 import com.aplus.news.databinding.FragmentHomeBinding
@@ -23,7 +23,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     override fun onSetupUI() = with(binding) {
         adapter = NewsAdapter(
-            fragment = this@HomeFragment,
+            context = requireContext(),
             items = listOf(),
             onClickNews = { gotoChosenNews(it) }
         )

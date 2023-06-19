@@ -1,11 +1,11 @@
 package com.aplus.news.utils
 
 import android.annotation.SuppressLint
-import android.os.Build
 import java.text.SimpleDateFormat
 import java.util.*
+import javax.inject.Inject
 
-class DateHelper {
+class DateHelper @Inject constructor() {
     @SuppressLint("SimpleDateFormat")
     fun changeFormatTime(time: String): String {
         return try {
