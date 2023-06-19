@@ -12,8 +12,6 @@ import javax.inject.Inject
 abstract class BaseFragment<T: ViewDataBinding>(private val layoutId: Int) : Fragment() {
 
     lateinit var binding: T
-    @Inject
-
     protected abstract fun onSetupUI()
     protected abstract fun onObserve()
 

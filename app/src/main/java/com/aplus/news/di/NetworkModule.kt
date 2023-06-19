@@ -21,7 +21,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 @InstallIn(SingletonComponent::class)
 class NetworkModule {
     private val timeout = 15L
-    private val BASE_URL: String = "https://60a4954bfbd48100179dc49d.mockapi.io/api/innocent/newsapp/"
+    private val baseURL: String = "https://60a4954bfbd48100179dc49d.mockapi.io/api/innocent/newsapp/"
 
     @Provides
     @Singleton
@@ -46,7 +46,7 @@ class NetworkModule {
     ): Retrofit =
         Retrofit.Builder()
             .addConverterFactory(MoshiConverterFactory.create())
-            .baseUrl(BASE_URL)
+            .baseUrl(baseURL)
             .client(okHttpClient)
             .build()
 

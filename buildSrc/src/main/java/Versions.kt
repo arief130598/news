@@ -3,7 +3,7 @@ object Ext {
 }
 
 object AndroidConfig {
-    const val APPLICATION_ID = "com.aplus.celebrities"
+    const val APPLICATION_ID = "com.aplus.news"
     const val MIN_SDK = 24
     const val TARGET_SDK = 33
     const val COMPILE_SDK = 33
