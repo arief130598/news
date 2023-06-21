@@ -7,6 +7,7 @@ plugins {
     id(Plugins.NAVIGATION_SAFE_ARGS)
     id(Plugins.DAGGER_HILT)
     id(Plugins.DOKKA)
+    id(Plugins.KOTLIN_PARCELIZE)
     kotlin(Plugins.KAPT)
 }
 
@@ -50,6 +51,9 @@ android {
 }
 
 dependencies {
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     singleModuleDeps()
     testingModuleDeps()
 }
